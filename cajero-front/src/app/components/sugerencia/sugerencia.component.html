@@ -1,0 +1,45 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Saldo disponible en cajero: ${{saldoDisponible}}</mat-card-title>
+  </mat-card-header>
+  <p>Seleccione la cantidad a retirar</p>
+  <mat-grid-list cols="2" rowHeight="50px">
+    <mat-grid-tile>
+      <button mat-raised-button color="primary" (click)="retirar(100)">100</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button color="primary" (click)="retirar(200)">200</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button color="primary" (click)="retirar(500)">500</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button color="primary" (click)="retirar(1000)">1,000</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button color="primary" (click)="retirar(2000)">2,000</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button color="primary" (click)="retirar(3000)">3,000</button>
+
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button color="primary" (click)="retirar(5000)">5,000</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button mat-raised-button color="primary" (click)="retirar(6000)">6,000</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>
+
+<mat-card>
+  <mat-list *ngFor="let c of cambio">
+    <mat-list-item>{{c.cantidad}} {{c.denominacion > 10 ? 'Billete(s)' : 'Moneda(s)'}}
+      de {{c.denominacion}} = {{c.cantidad*c.denominacion}}</mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</mat-card>
+<mat-card>
+  El total retirado es {{total}}
+</mat-card>
+

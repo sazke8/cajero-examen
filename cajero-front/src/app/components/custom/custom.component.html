@@ -1,0 +1,36 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Saldo disponible en cajero: ${{saldoDisponible}}</mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="customForm">
+    <p>Seleccione la cantidad a retirar</p>
+
+    <mat-grid-list cols="2" rowHeight="100px">
+      <mat-grid-tile>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Digite la cantida a retirar" formControlName="cantidadEspecifica"
+                 class="form-control">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button mat-raised-button color="primary" (click)="retirar()">Retirar</button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+</mat-card>
+
+<mat-card>
+  <mat-list *ngFor="let c of cambio">
+    <mat-list-item>{{c.cantidad}} {{c.denominacion > 10 ? 'Billete(s)' : 'Moneda(s)'}}
+      de {{c.denominacion}} = {{c.cantidad * c.denominacion}}</mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</mat-card>
+<mat-card>
+  El total retirado es {{total}}
+</mat-card>
+
+
+
+
+
