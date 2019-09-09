@@ -9,3 +9,11 @@ Ejecutar cajero: aplicacion construida en Spring boot + Kotlin.
 Ejecutar cajero-front como aplicacion de Angular.
 
 <img src="uno.png">
+
+<img src="dos.png">
+
+<img src="tres.png">
+
+<img src="cuatro.png">
+
+## Develop by Sazke
