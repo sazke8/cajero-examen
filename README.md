@@ -7,3 +7,5 @@ Ejecutar data-mysql.sql para cargar tablas y datos en una base de datos MySQL.
 Ejecutar cajero: aplicacion construida en Spring boot + Kotlin.
 
 Ejecutar cajero-front como aplicacion de Angular.
+
+<img src="uno.png">
